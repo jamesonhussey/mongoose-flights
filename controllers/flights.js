@@ -18,7 +18,7 @@ async function index(rew, res) {
 async function create(req, res) {
     try {
         await Flight.create(req.body)
-        res.redirect('flights/new')
+        res.redirect('flights')
     } catch(err) {
         console.log(err)
         res.render('flights/new', {errorMsg: err.message})

@@ -11,5 +11,5 @@ router.get('/new', flightsCtrl.new)
 router.post('/', flightsCtrl.create)
 
 //GET route to /flights (index)
-router.get('/index', flightsCtrl.index)
+router.get('/', flightsCtrl.index)
 
