@@ -10,4 +10,6 @@ router.get('/new', flightsCtrl.new)
 //POST /movies
 router.post('/', flightsCtrl.create)
 
+//GET route to /flights (index)
+router.get('/index', flightsCtrl.index)
 

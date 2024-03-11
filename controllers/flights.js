@@ -2,15 +2,19 @@ const Flight = require('../models/flight')
 
 module.exports = {
     new: newFlight,
-    create
+    create,
+    index
 }
 
 function newFlight(req, res) {
     res.render('flights/new', {errorMsg: ''})
 }
 
+async function index(rew, res) {
+    const flights = await Flight.find({})
+    res.render('flights/index', { flights })
+}
 
-//Says Flight.create is not a function
 async function create(req, res) {
     try {
         await Flight.create(req.body)
