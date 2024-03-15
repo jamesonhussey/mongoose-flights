@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<div>Before adding, please ensure that the ticket is not in the following list:</div>
+<section id="badge-container">
+  <% performers.forEach(function(p) { %>
+    <article class="badge"><%= p.name %></article>
+  <% }) %>
+</section>
+
+
+
+<%- include('../partials/footer') %>
